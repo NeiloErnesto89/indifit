@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Indifit</title>
-</head>
-<body>
-    <h1>About Indifit</h1>
-    
-</body>
-</html>
+{% extends 'base.html' %} 
+    {% block content %}
+    <h1>About</h1>
+
+        <p>
+           
+            <h3>{{ title }}</h3>  
+            
+        </p>
+
+    <!-- posts variable we are looking over is the key in the context (views.py) -->
+    {% endblock %}

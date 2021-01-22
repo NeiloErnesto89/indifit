@@ -60,7 +60,7 @@ ROOT_URLCONF = 'indifit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # added to change template inheritance to base.html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
