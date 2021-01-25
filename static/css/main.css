@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #444444;
   }
 
+/* .bg-light {
+    background-color: #5f788a;
+  } */
+
 .site-header .navbar-nav .nav-link {
     color: #cbd5db;
   }
