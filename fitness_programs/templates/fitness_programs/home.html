@@ -1,16 +1,21 @@
 {% extends 'base.html' %} 
     {% block content %}
-        <h1>Home</h1>
-
-        <p>
-            {% for post in posts%}
-            <h4>{{ post.title }}</h4>  
-            <h4>{{ post.author }}</h4>
-            <h4>{{ post.content }}</h4>
-            <h4>{{ post.date }}</h4>
-            <!-- use . notation on dict to get title  -->
-            {% endfor %}
-        </p>
+    
+        {% for post in posts%}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+            </article>
+        <!-- use . notation on dict to get title  -->
+        {% endfor %}
 
         <!-- posts variable we are looking over is the key in the context (views.py) -->
     {% endblock %}
+
+  
