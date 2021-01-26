@@ -1,26 +1,13 @@
 from django.shortcuts import render
 from time import ctime
+from .models import Post  # (dot).models as it's in the same directory
 # from django.http import HttpResponse
 
-# dummy data
-posts = [
-    {
-        'author': 'Neil',
-        'title': 'blog',
-        'content' : 'hello there user',
-        'date' : ctime()
-    },
-    {
-        'author': 'Andy',
-        'title': 'blog2',
-        'content' : 'hello there fwriend',
-        'date' : ctime()
-    }
-]
+# dummy data - removed
 
 def home(request):
     contexts = {
-        'posts' : posts
+        'posts' : Post.objects.all()  # query our DB posts just like shell (instead of dummy) - dict keys should be same as db fields
     }
     return render(request, 'fitness_programs/home.html', contexts)  # 3 arg here is context to pas info into template
     # return HttpResponse('<h1>Indifit Home</h1>')
